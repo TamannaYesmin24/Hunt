@@ -1,0 +1,240 @@
+#about{
+    .header{
+        margin-top: -200px;
+        h2{
+            @include font('Raleway',35px,400,$headingcolor);
+            text-transform: capitalize;
+            @include mgap(0,0,0,23px);
+        }
+        p{
+            @include font('Open Sans',14px,400,$paracolor);
+            line-height: 24px;
+            @include pgap(23px,21px,0,0);
+            
+        }
+    }
+    .main-top{
+        position: relative;
+        .top-about{
+            width: 100%;
+            background-color: $boxcolorbg;
+            @include pgap(35px,34px,39px,46px);
+            transition: all linear 0.3s;
+            position: relative;
+            h4{
+                @include font('Raleway',18px,500,$headingcolor);
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            p{
+                @include font('Open Sans',14px,400,$paracolor);
+                line-height: 24px;
+                @include pgap(21px,22px,0,0);
+            }
+            .top-shape{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                bottom: -19px;
+                left: 50%;
+                transform: translateX(-50%) rotate(-45deg);
+                background-color: $boxcolorbg;
+            }
+        }
+        .top-circle{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $bordercolorbg;
+            border-radius: 50%;
+            transition: all linear 0.3s;
+        }
+        &:hover{
+            .top-about{
+                filter: drop-shadow(0px 5px 5px $shadowcolorbg);
+            }
+            .top-circle{
+                background-color: $primarybg;
+            }
+        }
+    }
+    .main-left{
+        position: relative;
+        .left-about{
+            width: 100%;
+            background-color: $boxcolorbg;
+            @include pgap(33px,30px,39px,46px);
+            position: relative;
+            transition: all linear 0.3s;
+            h4{
+                @include font('Raleway',18px,500,$headingcolor);
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            p{
+                @include font('Open Sans',14px,400,$paracolor);
+                line-height: 24px;
+                @include pgap(25px,2px,0,0);
+            }
+            .left-shape{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                right: -19px;
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+                background-color: $boxcolorbg;
+            }
+        }
+        .left-circle{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -58px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $bordercolorbg;
+            border-radius: 50%;
+            transition: all linear 0.3s;
+        }
+        &:hover{
+            .left-about{
+                filter: drop-shadow(0px 0px 5px $shadowcolorbg);
+            }
+            .left-circle{
+                background-color: $primarybg;
+            }
+        }
+    }
+    .mid-about{
+        width: 100%;
+        @include mgap(0,0,50px,50px);
+        .main-circle{
+            width: 370px;
+            height: 370px;
+            border: 1px solid $bordercolorbg;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .inner-circle{
+                width: 320px;
+                height: 320px;
+                border-radius: 50%;
+                overflow: hidden;
+                position: relative;
+                img{
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .overlay{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+            }
+        }        
+    }
+    .main-right{
+        position: relative;
+        .right-about{
+            width: 100%;
+            background-color: $boxcolorbg;
+            @include pgap(35px,34px,39px,46px);
+            position: relative;
+            transition: all linear 0.3s;
+            h4{
+                @include font('Raleway',18px,500,$headingcolor);
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            p{
+                @include font('Open Sans',14px,400,$paracolor);
+                line-height: 24px;
+                @include pgap(0,15px,0,0);
+            }
+            .right-shape{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                left: -19px;
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+                background-color: $boxcolorbg;
+            }
+        }
+        .right-circle{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -58px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $bordercolorbg;
+            border-radius: 50%;
+            transition: all linear 0.3s;
+        }
+        &:hover{
+            .right-about{
+                filter: drop-shadow(0px 0px 5px $shadowcolorbg);
+            }
+            .right-circle{
+                background-color: $primarybg;
+            }
+        }
+    }
+    .main-bottom{
+        position: relative;
+        .bottom-about{
+            width: 100%;
+            background-color: $boxcolorbg;
+            @include pgap(35px,34px,39px,46px);
+            position: relative;
+            transition: all linear 0.3s;
+            h4{
+                @include font('Raleway',18px,500,$headingcolor);
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            p{
+                @include font('Open Sans',14px,400,$paracolor);
+                line-height: 24px;
+                @include pgap(21px,22px,0,0);
+            }
+            .bottom-shape{
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: -19px;
+                left: 50%;
+                transform: translateX(-50%) rotate(-45deg);
+                background-color: $boxcolorbg;
+            }
+        }
+        .bottom-circle{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: -58px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $bordercolorbg;
+            border-radius: 50%;
+            transition: all linear 0.3s;
+        }
+        &:hover{
+            .bottom-about{
+                filter: drop-shadow(0px 5px 5px $shadowcolorbg);
+            }
+            .bottom-circle{
+                background-color: $primarybg;
+            }
+        }
+    }
+}

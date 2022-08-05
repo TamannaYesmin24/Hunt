@@ -1,0 +1,139 @@
+.navbar{
+    border-bottom: 1px solid $primarybg;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    @include pgap(0,0,0,0);
+    .navbar-brand{
+        @include pgap(0,0,27px,27px);
+    }
+    .navbar-nav{
+        .nav-item{
+            @include pgap(16px,16px,0,0);
+            &:last-child{
+                padding-right: 0;
+            }
+            .nav-link{
+                padding-left: 0;
+                padding-right: 0;
+                @include font('Raleway',16px,500,$normalcolor);
+                text-transform: capitalize;
+                transition: all linear 0.3s;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    bottom: -34px;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background-color: $primarybg;
+                    transform: scale(0, 1);
+                    transform-origin: right center;
+                    transition: transform 0.3s ease, 
+                    -webkit-transform 0.3s ease;
+                }
+                &:hover{
+                    color: $hovercolor;
+                    &::after{
+                        transform: scale(1, 1);
+                        transform-origin: left center;
+                    }
+                }
+            }
+            // @include pgap(16px,16px,0,0);
+            // &:last-child{
+            //     padding-right: 0;
+            // }
+        }
+    }
+
+    // coutom menu-bar css start
+    .bars{
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        border: 1px solid $primarybg;
+        position: relative;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        cursor: pointer;
+        z-index: 9999999999;
+        .bar-line{
+            display: inline-block;
+            width: 40px;
+            height: 4px;
+            background-color: $primarybg;
+            border-radius: 5px;
+            margin: 4px 0;
+            transition: all linear 0.3s;
+        }
+        .bar-line.line-two{
+            width: 25px;
+            margin-right: -12px;
+            border-radius: 5px;
+        }
+        .line-one.close-line1{
+            transform: rotate(45deg);
+            position: absolute;
+            top: 18px;
+            left: 3px;
+            width: 45px;
+        }
+        .line-two.close-line2{
+            opacity: 0;
+            margin-left: 20px;
+        }
+        .line-three.close-line3{
+            transform: rotate(-45deg);
+            position: absolute;
+            bottom: 18px;
+            left: 3px;
+            width: 45px;
+        }
+    }
+    #mobile-menu{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background-color: #810955;
+        width: 60vw;
+        height: 100vh;
+        @include pgap(50px,50px,50px,50px);
+        text-align: center;
+        transition: all linear 0.3s;
+        .nav-item{
+            @include pgap(0,0,5px,5px);
+        }
+    }
+    #mobile-menu.slide-menu{
+        left: 0;
+    }
+    // coutom menu-bar css end
+}
+
+// sticky menu start
+.sticky-menu{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #4C3A51;
+    animation: sticky 1s;
+    padding: 20px;
+}
+@keyframes sticky{
+    from{
+        top: -100px;
+    }
+    to{
+        top: 0;
+    }
+}
+.scroll-logo{
+    padding: 7px !important;
+}
+// sticky menu end

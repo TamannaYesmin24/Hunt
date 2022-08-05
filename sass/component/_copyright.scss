@@ -1,0 +1,12 @@
+#copyright{
+    background-color: $bordercolorbg;
+    @include pgap(0,0,22px,22px);
+    .copy-text{
+        p{
+            @include font('Lato',13px,400,$anoparcolor);
+        }
+        span{
+            color: $hovercolor;
+        }
+    }
+}

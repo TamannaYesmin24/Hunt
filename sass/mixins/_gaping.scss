@@ -1,0 +1,13 @@
+@mixin pgap($pl,$pr,$pt,$pb) {
+    padding-left: $pl;
+    padding-right: $pr;
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
+@mixin mgap($ml,$mr,$mt,$mb) {
+    margin-left: $ml;
+    margin-right: $mr;
+    margin-top: $mt;
+    margin-bottom: $mb;
+}

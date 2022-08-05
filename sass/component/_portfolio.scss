@@ -1,0 +1,79 @@
+#portfolio{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/portfolio.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include pgap(0,0,112px,75px);
+    .header{
+        h2{
+            @include font('Raleway',35px,400,$normalcolor);
+            text-transform: capitalize;
+            @include mgap(0,0,0,23px);
+        }
+        p{
+            @include font('Open Sans',14px,400,$anoparcolor);
+            line-height: 24px;
+            @include pgap(23px,23px,0,0);            
+            @include mgap(0,0,0,70px);            
+        }
+    }
+    .port-items{
+        margin-bottom: 30px;
+        position: relative;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        .port-img-overlay{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 0;
+            height: 90%;
+            background-color: rgba(254, 199, 0, 0.5);
+            opacity: 0;
+            transition: all linear 0.3s;
+            .port-icon{
+                position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                a{
+                    color: $paracolor;
+                    font-size: 35px;
+                }               
+            }
+        }
+        &:hover{
+            .port-img-overlay{
+                width: 90%;
+                opacity: 1;
+                border: 4px solid rgb(133, 32, 32);
+            }
+        }
+    }
+}
+
+.main-port{
+    position: relative;
+    .port-top-shape{
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        top: 0;
+        left: 0;
+        background-color: $secondarybg;
+        transform: skew(-87deg);
+        transform-origin: left top;
+    }
+    .port-bottom-shape{
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        bottom: 0;
+        left: 0;
+        background-color: $secondarybg;
+        transform: skew(-88deg);
+        transform-origin: left bottom;
+    }
+}

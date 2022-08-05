@@ -1,0 +1,51 @@
+#sponsorship{
+    background-color: $servbordcolorbg;
+    @include pgap(0,0,100px,100px);
+        .sponsorship-wrapper{
+            transform: rotate(-3deg);
+            .sponsorship-item{
+                width: 244px;
+                border: 1px solid $backcolorbg;
+                @include pgap(0,0,45px,42px);
+                @include mgap(12px,12px,0,0);
+                transition: all linear 0.3s;
+                transform: skew(-4deg);
+                img{
+                    transform: rotate(3deg);
+                    margin: auto;
+                }
+                &.slick-center{
+                    border-color: $primarybg;
+                }
+            }
+        }
+    
+}
+
+.sponsorship-main-shape{
+    position: relative;
+    .sponsorship-top-shape{
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        background-color: $secondarybg;
+        top: 0;
+        left: 0;
+        transform: skew(-86deg);
+        transform-origin: left top;
+    }
+    
+}
+.sponsorship-shape{
+    position: relative;
+    .sponsorship-bottom-shape{
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        background-color: $backgrucolorbg;
+        bottom: 0;
+        left: 0;
+        transform: skew(-86deg);
+        transform-origin: left bottom;
+    }
+}

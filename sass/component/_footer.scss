@@ -1,0 +1,93 @@
+#footer{
+    background-color: $backgrucolorbg;
+    position: relative;
+    @include pgap(0,0,0,30px);
+    .footer-logo{
+        @include pgap(0,0,0,100px);
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        top: 89px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #555;
+        transform: rotate(-3.5deg);
+    }
+    .footer-line{
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0px;
+            width: 2px;
+            height: 100px;
+            background-color: #555;
+        }
+
+        &:last-child {
+            &::after{
+                display: none;
+            }
+        }
+        .footer-item{
+            .f-icon{
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: $primarybg;
+                line-height: 35px;
+                text-align: center;
+                a{
+                    font-size: 18px;
+                    color: $paracolor;
+                }
+            }
+            .f-text{
+                @include font('Raleway',16px,500,$normalcolor);
+                text-align: center;
+                margin-top: 18px;
+                p span{
+                    display: block;
+                    @include mgap(0,0,12px,0);
+                }
+            }
+        }
+    }
+
+  
+
+    .footer-bottom{
+        p{
+            @include font('Raleway',20px,500,$normalcolor);
+            text-align: center;
+            text-transform: uppercase;
+            @include mgap(0,0,60px,30px);
+        }
+        .bottom-icon{
+            .i-item{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: $secondarybg;
+                line-height: 40px;
+                text-align: center;
+                @include mgap(0,30px,0,0);
+                transition: all linear 0.3s;
+                cursor: pointer;
+                a{
+                    font-size: 20px;
+                    color: $paracolor;
+                }
+                &:last-child{
+                    @include mgap(0,0,0,0);
+                }
+                &:hover{
+                    background-color: $primarybg;
+                }
+            }
+        }
+    }
+}
