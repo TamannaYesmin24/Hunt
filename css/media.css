@@ -9,7 +9,7 @@ body,html{
 /* responsive for xtra xtra large device end */
 
 /* responsive for xtra large device start */
-@media (min-width:1200px) and (max-width:1399.99px){
+@media (min-width:1200px) and (max-width:1399px){
     /* about part start */
     #about .main-right .right-about {
         margin-left: 29px;
@@ -47,7 +47,7 @@ body,html{
 /* responsive for xtra large device end */
 
 /* large device start */
-@media (min-width:992px) and (max-width:1199.99px){
+@media (min-width:992px) and (max-width:1199px){
 
     /* navbar part start */
     .sticky-menu {
@@ -242,7 +242,7 @@ body,html{
 }
 /* large device end */
 /* medium device start */
-@media (min-width:768px) and (max-width:991.99px){
+@media (min-width:768px) and (max-width:991px){
     /* navbar part start */
     .navbar-brand img {
         transform: scale(0.9);
@@ -509,7 +509,7 @@ body,html{
 /* medium device end */
 
 /* small device start */
-@media (min-width:576px) and (max-width:767.99px){
+@media (min-width:576px) and (max-width:767px){
     /* navbar part start */
     .navbar-brand img{
         transform: scale(0.9);
